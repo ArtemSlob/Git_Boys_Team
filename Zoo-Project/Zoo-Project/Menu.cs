@@ -8,5 +8,13 @@ namespace Zoo_Project
 {
     class Menu
     {
+        static public void Start()
+        {
+            while (true)
+            {
+                MainMenu();
+                ChooseMenuPoint();
+            }
+        }
     }
 }
