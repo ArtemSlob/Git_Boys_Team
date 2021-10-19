@@ -56,5 +56,23 @@ namespace Zoo_Project
                     break;
             }
         }
+
+        static public void KickOut()
+        {
+            if (Zoo.VisitorAmount > 0)
+            {
+                Zoo.VisitorAmount--;
+            }
+            else
+            {
+                Console.WriteLine($"Amount of visitors in Zoo: {Zoo.VisitorAmount}");
+            }
+        }
+
+        static public void CloseZoo()
+        {
+            Zoo.VisitorAmount = 0;
+            Statistc();
+        }
     }
 }
