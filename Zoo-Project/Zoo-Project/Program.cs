@@ -12,6 +12,7 @@ namespace Zoo_Project
         {
             Menu.Start();
             Console.Beep(400,2000);
+            Console.WriteLine("Welcome to our Zoo!");
         }
     }
 }

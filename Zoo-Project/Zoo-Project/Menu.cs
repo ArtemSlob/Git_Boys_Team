@@ -80,7 +80,6 @@ namespace Zoo_Project
             Console.WriteLine($"Earnings of Zoo: {Zoo.Earnings}$");
             Console.WriteLine($"Visitors amount of Zoo: {Zoo.AllVisitorAmount}");
         }
-<<<<<<< HEAD
 
         static public void SellTicket()
         {
@@ -161,12 +160,10 @@ namespace Zoo_Project
             bool isNum = int.TryParse(Console.ReadLine(), out animalChoose);
             while (!isNum || animalChoose < 1 || animalChoose > 125)
             {
+            return animalChoose;
                 Console.WriteLine("Wrong input! Try againe");
                 isNum = int.TryParse(Console.ReadLine(), out animalChoose);
             }
-            return animalChoose;
         }
-=======
->>>>>>> main
     }
 }
