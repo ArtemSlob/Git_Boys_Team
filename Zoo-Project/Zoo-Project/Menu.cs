@@ -125,5 +125,45 @@ namespace Zoo_Project
                 }
             }
         }
+
+        static public int AgeChoose()
+        {
+            Console.WriteLine("Enter visitor age: ");
+            int visitorAge;
+            bool isNum = int.TryParse(Console.ReadLine(), out visitorAge);
+            while (!isNum || visitorAge < 7 || visitorAge > 125)
+            {
+                Console.WriteLine("Wrong input! Try againe");
+                isNum = int.TryParse(Console.ReadLine(), out visitorAge);
+            }
+            return visitorAge;
+        }
+
+        private static bool IsMoneyEnough(double visitorMoney, double ticketPrice)
+        {
+            return visitorMoney >= ticketPrice;
+        }
+
+        static public void DisplayAnimals(List<Animal> animals)
+        {
+            int number = 1;
+            foreach (Animal animal in animals)
+            {
+                Console.WriteLine($"{number++}. {animal.AnimalName} - {animal.AnimalCost}$");
+            }
+        }
+
+        static public int AnimalChoose()
+        {
+            Console.WriteLine("Enter Animal number: ");
+            int animalChoose;
+            bool isNum = int.TryParse(Console.ReadLine(), out animalChoose);
+            while (!isNum || animalChoose < 1 || animalChoose > 125)
+            {
+                Console.WriteLine("Wrong input! Try againe");
+                isNum = int.TryParse(Console.ReadLine(), out animalChoose);
+            }
+            return animalChoose;
+        }
     }
 }
