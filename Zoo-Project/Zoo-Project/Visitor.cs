@@ -8,15 +8,13 @@ namespace Zoo_Project
 {
     public class Visitor
     {
-        public int Age;
-        public double Money;
+        public int VisitorAge;
+        public double VisitorMoney;
 
-        public Visitor(int age)
+        public Visitor(int visitorAge)
         {
-            Age = age;
-
-            Random randomMoney = new Random();
-            Money = randomMoney.Next(1500, 2000);
+            VisitorAge = visitorAge;
+            VisitorMoney = new Random().Next();
         }
     }
 }
