@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zoo_Project
 {
-   public class Menu
+    static class Menu
     {
         static public void Start()
         {
@@ -160,10 +160,66 @@ namespace Zoo_Project
             bool isNum = int.TryParse(Console.ReadLine(), out animalChoose);
             while (!isNum || animalChoose < 1 || animalChoose > 125)
             {
-            return animalChoose;
                 Console.WriteLine("Wrong input! Try againe");
                 isNum = int.TryParse(Console.ReadLine(), out animalChoose);
             }
+            return animalChoose;
+        }
+
+        static List<int> AskNumOfAnimals(int availebleAnimalsCount)
+        {
+            bool isValidInput = true;
+            List<int> numberOfAnimals = new List<int>();
+            Console.WriteLine("Please write numbers of chosen animals using space:");
+            do
+            {
+                numberOfAnimals.Clear();
+                isValidInput = true;
+                string stringInput = Console.ReadLine();
+                if (stringInput.Length == 0)
+                {
+                    Console.WriteLine("Your input is empty");
+                    break;
+                }
+                string[] arrOfStringInputs = stringInput.Trim().Split(new char[] { ' ' });
+                for (int i = 0; i < arrOfStringInputs.Length; i++)
+                {
+                    if (!int.TryParse(arrOfStringInputs[i], out int num) || (num > availebleAnimalsCount || num < 1))
+                    {
+                        isValidInput = false;
+                        break;
+                    }
+                    numberOfAnimals.Add(num - 1);
+                }
+                if (!isValidInput)
+                {
+                    Console.WriteLine("Your input is invalid! Try again: ");
+                }
+            }
+            while (!isValidInput);
+            return numberOfAnimals;
+        }
+
+        static bool AskTreat()
+        {
+            Console.WriteLine("Would you like to buy treats for animals?");
+            Console.WriteLine("Enter 'y' for YES. Other keys for no");
+            if (Console.ReadLine().ToLower() == "y")
+            {
+                return true;
+            }
+            return false;
+        }
+
+        static double CountSum(List<int> choosenAnimals, double treat)
+        {
+            double sum = 0;
+            foreach (int index in choosenAnimals)
+            {
+                sum += Zoo.Animals[index].AnimalCost;
+            }
+            sum += treat;
+            return sum;
         }
     }
 }
