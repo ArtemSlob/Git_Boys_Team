@@ -80,6 +80,7 @@ namespace Zoo_Project
             Console.WriteLine($"Earnings of Zoo: {Zoo.Earnings}$");
             Console.WriteLine($"Visitors amount of Zoo: {Zoo.AllVisitorAmount}");
         }
+<<<<<<< HEAD
 
         static public void SellTicket()
         {
@@ -165,5 +166,7 @@ namespace Zoo_Project
             }
             return animalChoose;
         }
+=======
+>>>>>>> main
     }
 }
