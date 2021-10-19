@@ -10,6 +10,8 @@ namespace Zoo_Project
     {
         static void Main(string[] args)
         {
+
+            Console.Beep(400,2000);
         }
     }
 }
