@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2021_09_28_Zoo
+namespace Zoo_Project
 {
-    static class Zoo
+   static class Zoo
     {
         static public List<Animal> Animals = new List<Animal>()
         {

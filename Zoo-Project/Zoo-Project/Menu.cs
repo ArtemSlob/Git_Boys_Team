@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zoo_Project
 {
-    class Menu
+   public class Menu
     {
         static public void Start()
         {

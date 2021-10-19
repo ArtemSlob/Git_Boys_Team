@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2021_09_28_Zoo
+namespace Zoo_Project
 {
-    class Animal
+     public class Animal
     {
         public string AnimalName;
         public double AnimalCost;

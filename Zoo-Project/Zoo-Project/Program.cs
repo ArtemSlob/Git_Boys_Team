@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Zoo_Project
 {
-    class Program
+   public class Program
     {
-        static void Main(string[] args)
+       public static void Main(string[] args)
         {
             Menu.Start();
             Console.Beep(400,2000);
