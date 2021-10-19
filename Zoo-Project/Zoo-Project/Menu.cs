@@ -74,5 +74,11 @@ namespace Zoo_Project
             Zoo.VisitorAmount = 0;
             Statistc();
         }
+
+        static public void Statistc()
+        {
+            Console.WriteLine($"Earnings of Zoo: {Zoo.Earnings}$");
+            Console.WriteLine($"Visitors amount of Zoo: {Zoo.AllVisitorAmount}");
+        }
     }
 }
